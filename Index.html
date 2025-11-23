@@ -3,82 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Our Group Online Jobs Group </title>
+    <title>GetMapRatings - Premium Google Reviews</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
+        
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container {
-            text-align: center;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            max-width: 500px;
-            width: 90%;
-        }
-
-        h1 {
+            background-color: #f8f9fa;
             color: #333;
-            margin-bottom: 20px;
-            font-size: 2.5em;
-        }
-
-        .description {
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 1.1em;
             line-height: 1.6;
         }
-
-        .group-link {
-            display: inline-block;
-            background: #4CAF50;
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 1px solid #eaeaea;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #4285f4;
+            margin-bottom: 10px;
+        }
+        
+        .website {
+            color: #5f6368;
+            font-size: 1.2rem;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
             color: white;
-            text-decoration: none;
-            padding: 15px 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(66, 133, 244, 0.3);
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 14px 30px;
             border-radius: 50px;
-            font-size: 1.2em;
-            font-weight: bold;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
             transition: all 0.3s ease;
-            margin: 10px 0;
+            text-decoration: none;
+            display: inline-block;
         }
-
-        .group-link:hover {
-            background: #45a049;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        
+        .btn-primary {
+            background-color: white;
+            color: #4285f4;
+            border: 2px solid white;
         }
-
-        .instructions {
-            margin-top: 20px;
-            color: #777;
-            font-size: 0.9em;
+        
+        .btn-primary:hover {
+            background-color: transparent;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: white;
+            color: #4285f4;
+        }
+        
+        .testimonial {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 40px auto;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: """;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 80px;
+            color: #4285f4;
+            opacity: 0.2;
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #5f6368;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #f1f3f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #4285f4;
+        }
+        
+        .author-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .stars {
+            color: #fbbc04;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .feature {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: #4285f4;
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #202124;
+        }
+        
+        .feature p {
+            color: #5f6368;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+            border-top: 1px solid #eaeaea;
+            color: #5f6368;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Join Our Community Online Jobs</h1>
-        <p class="description">Connect with like-minded people and be part of our growing community. Click the link below to join our group!</p>
+        <header>
+            <div class="logo">GetMapRatings</div>
+            <div class="website">getmapratings.com</div>
+        </header>
         
-        <a href="https://example.com/your-group-link" class="group-link" target="_blank">
-            Join Our Group Now
-        </a>
+        <section class="hero">
+            <h1>Boost Your Business with Premium Google Reviews</h1>
+            <p>Get authentic, high-quality Google reviews that enhance your online presence and build customer trust. Our service delivers genuine reviews to help your business stand out from the competition.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Get Started</a>
+                <a href="#" class="btn btn-secondary">Learn More</a>
+            </div>
+        </section>
         
-        <p class="instructions">Click the button above to join our group. The link will open in a new tab.</p>
+        <section class="features">
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Authentic Reviews</h3>
+                <p>We provide only genuine reviews from real users to maintain your business credibility and comply with platform policies.</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Increased Visibility</h3>
+                <p>Boost your search rankings and online visibility with a steady stream of positive Google reviews.</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Trust & Credibility</h3>
+                <p>Build customer trust and establish your business as a reliable choice with verified positive feedback.</p>
+            </div>
+        </section>
+        
+        <div class="testimonial">
+            <div class="testimonial-content">
+                "These Google reviews transformed my business. New customers mention finding us through our excellent reviews every day!"
+            </div>
+            <div class="testimonial-author">
+                <div class="author-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="author-info">
+                    <h3>Sarah Johnson</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 GetMapRatings. All rights reserved.</p>
+        </footer>
     </div>
 </body>
 </html>
